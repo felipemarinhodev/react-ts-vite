@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import reactLogo from '../../assets/react.svg'
-import viteLogo from '/vite.svg'
-
+import viteLogo from '../../../public/vite.svg'
 
 export function Home() {
   const [count, setCount] = useState(0)
@@ -9,10 +8,10 @@ export function Home() {
   return (
     <div className="App">
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a href="https://reactjs.org" target="_blank">
+        <a href="https://reactjs.org" target="_blank" rel="noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
@@ -21,11 +20,11 @@ export function Home() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        {count > 0
-          ? <p>
+        {count > 0 ? (
+          <p>
             <code>The count is now: {count}</code>
           </p>
-          : null}
+        ) : null}
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
